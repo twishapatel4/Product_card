@@ -1,0 +1,86 @@
+body {
+  display: flex;
+  width: 100%;
+  padding: 2rem 6rem;
+}
+.sidebar {
+  width: 15%;
+}
+.form {
+  width: 70%;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+.addProduct {
+  height: 2rem;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+}
+.form-main {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+}
+.form-left {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  width: 70%;
+}
+.form-left-top {
+  display: flex;
+  gap: 2rem;
+}
+.form-right {
+  padding: 2rem;
+  width: 30%;
+}
+.photo {
+  border: 2px black dashed;
+  width: 30%;
+}
+.name {
+  width: 80%;
+}
+.name input {
+  margin: 1rem;
+  width: 90%;
+}
+.checkbox {
+  width: 1rem;
+  height: auto;
+}
+.entry {
+  margin: 1rem;
+}
+.entry input {
+  width: 80%;
+}
+.form-right svg,
+input {
+  width: 2rem;
+  height: 2rem;
+}
+.form-right input {
+  width: 70%;
+}
+.descInput {
+  width: 100%;
+}
+.desc svg {
+  width: 1rem;
+}
+.sku-qty {
+  display: flex;
+  width: 100%;
+}
+.entry {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}

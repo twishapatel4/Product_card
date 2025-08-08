@@ -8,145 +8,140 @@
   </head>
   <body>
     <section class="sidebar">
-      <div class="productList">Product List</div>
+      <div class="products">Product List</div>
+      <ul class="productList"></ul>
     </section>
-    <section >
+    <section>
       <form class="form">
-      <div class="header">
-        <h3>Adding New Product</h3>
-        <button class="addProduct">Add New Product</button>
-      </div>
-      <div class="navbar">
-        <p>General</p>
-        <p>Attributes</p>
-        <p>Options</p>
-        <p>Gallery</p>
-        <p>Files</p>
-        <p>Tax and Shipping</p>
-        <p>SEO</p>
-      </div>
-      <div class="form-main">
-        <div class="form-left">
-          <div class="form-left-top">
-            <div class="photo">
-              Add image
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="size-6"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-                />
-              </svg>
-            </div>
-            <div class="name">
-              <div class="name-entry" name="name">Name</div>
-              <input type="text" />
-              <div class="sku-qty">
-                <div class="entry" name="sku">SKU <input type="text" /></div>
-                <div class="entry" name="quantity">Quantity <input type="text" /></div>
-              </div>
-              <p class="checkneeded">
-                <input class="checkbox" type="checkbox" name="shipping"/> Requires Shipping or
-                pickup
-              </p>
-            </div>
-          </div>
-          <div class="form-left-bottom">
-            <h4>Description</h4>
-            <div class="desc">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="size-6"
-              >
-                <path
-                  stroke-linejoin="round"
-                  d="M6.75 3.744h-.753v8.25h7.125a4.125 4.125 0 0 0 0-8.25H6.75Zm0 0v.38m0 16.122h6.747a4.5 4.5 0 0 0 0-9.001h-7.5v9h.753Zm0 0v-.37m0-15.751h6a3.75 3.75 0 1 1 0 7.5h-6m0-7.5v7.5m0 0v8.25m0-8.25h6.375a4.125 4.125 0 0 1 0 8.25H6.75m.747-15.38h4.875a3.375 3.375 0 0 1 0 6.75H7.497v-6.75Zm0 7.5h5.25a3.75 3.75 0 0 1 0 7.5h-5.25v-7.5Z"
-                />
-              </svg>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="size-6"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M5.248 20.246H9.05m0 0h3.696m-3.696 0 5.893-16.502m0 0h-3.697m3.697 0h3.803"
-                />
-              </svg>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="size-6"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M17.995 3.744v7.5a6 6 0 1 1-12 0v-7.5m-2.25 16.502h16.5"
-                />
-              </svg>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="size-6"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M10.5 6h9.75M10.5 6a1.5 1.5 0 1 1-3 0m3 0a1.5 1.5 0 1 0-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-9.75 0h9.75"
-                />
-              </svg>
-            </div>
-            <input
-              class="descInput" name="desc"
-              placeholder="This is the test Description"
-            />
-          </div>
+        <div class="header">
+          <h3 class="mode">Adding New Product</h3>
+          <button class="addProduct" type="submit">Add New Product</button>
+          <button class="UpdateProduct hidden" type="submit">
+            Update Product
+          </button>
+          <button class="DeleteProduct hidden" type="submit">
+            Delete Product
+          </button>
         </div>
-        <div class="form-right">
-          Price
-          <p>
-            $ <input type="number" name="price" /><svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="size-6"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="m9 12.75 3 3m0 0 3-3m-3 3v-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-              />
-            </svg>
-          </p>
-          <hr />
-          <div>
-            <p>Availability</p>
+        <div class="navbar">
+          <p>General</p>
+          <p>Attributes</p>
+          <p>Options</p>
+          <p>Gallery</p>
+          <p>Files</p>
+          <p>Tax and Shipping</p>
+          <p>SEO</p>
+        </div>
+        <div class="form-main">
+          <div class="form-left">
+            <div class="form-left-top">
+              <div class="photo">
+                <input type="file" class="imageInput" name="image" />
+                Add image
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                  />
+                </svg>
+              </div>
+              <div class="name">
+                <div class="name-entry">Name</div>
+                <input
+                  type="text"
+                  name="productName"
+                  placeholder="Enter Product Name"
+                />
+                <div class="sku-qty">
+                  <div class="entry">SKU <input type="text" name="sku" /></div>
+                  <div class="entry">
+                    Quantity <input type="text" name="quantity" />
+                  </div>
+                </div>
+                <p class="checkneeded">
+                  <input class="checkbox" type="checkbox" name="shipping" />
+                  Requires Shipping or pickup
+                </p>
+              </div>
+            </div>
+            <div class="form-left-bottom">
+              <h4>Description</h4>
+              <div class="desc">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6"
+                >
+                  <path
+                    stroke-linejoin="round"
+                    d="M6.75 3.744h-.753v8.25h7.125a4.125 4.125 0 0 0 0-8.25H6.75Zm0 0v.38m0 16.122h6.747a4.5 4.5 0 0 0 0-9.001h-7.5v9h.753Zm0 0v-.37m0-15.751h6a3.75 3.75 0 1 1 0 7.5h-6m0-7.5v7.5m0 0v8.25m0-8.25h6.375a4.125 4.125 0 0 1 0 8.25H6.75m.747-15.38h4.875a3.375 3.375 0 0 1 0 6.75H7.497v-6.75Zm0 7.5h5.25a3.75 3.75 0 0 1 0 7.5h-5.25v-7.5Z"
+                  />
+                </svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M5.248 20.246H9.05m0 0h3.696m-3.696 0 5.893-16.502m0 0h-3.697m3.697 0h3.803"
+                  />
+                </svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M17.995 3.744v7.5a6 6 0 1 1-12 0v-7.5m-2.25 16.502h16.5"
+                  />
+                </svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M10.5 6h9.75M10.5 6a1.5 1.5 0 1 1-3 0m3 0a1.5 1.5 0 1 0-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-9.75 0h9.75"
+                  />
+                </svg>
+              </div>
+              <textarea
+                class="descInput"
+                name="desc"
+                placeholder="This is the test Description"
+              ></textarea>
+            </div>
+          </div>
+          <div class="form-right">
+            Price
             <p>
-              <a>Enable</a> |<a> Disable</a>
-              <svg
+              $ <input type="number" name="price" /><svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -161,13 +156,37 @@
                 />
               </svg>
             </p>
+            <hr />
+            <div>
+              <p>Availability</p>
+              <p>
+                <a>Enable</a> |<a> Disable</a>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m9 12.75 3 3m0 0 3-3m-3 3v-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                  />
+                </svg>
+              </p>
+            </div>
+
+            <hr />
+            <a href="#">Preview Product</a>
           </div>
-          </form>
-          <hr />
-          <a href="#">Preview Product</a>
         </div>
-      </div>
+      </form>
     </section>
+
+    <section class="displayProduct hidden"></section>
+
     <script type="module" src="js/controller.js"></script>
   </body>
 </html>

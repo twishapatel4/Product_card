@@ -5,7 +5,7 @@ export const state = {
 
 export const createProduct = function (product) {
   const newProduct = {
-    id: Math.random() * 100000,
+    id: product.id,
     name: product.productName,
     desc: product.desc,
     quantity: product.quantity,
@@ -22,6 +22,16 @@ export const createProduct = function (product) {
   return newProduct;
 };
 
+export const updateProduct = function (prod) {};
+
+export const deleteProduct = function (id) {
+  state.products = state.products.filter(
+    (product) => Number(product.id) !== Number(id)
+  );
+  console.log("Deleted");
+  console.log(state.products);
+  persistProducts();
+};
 const persistProducts = function () {
   localStorage.setItem("Products", JSON.stringify(state.products));
 };
